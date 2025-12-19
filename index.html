@@ -1,23 +1,42 @@
 <!DOCTYPE html><html><head>
-<meta charset="utf-8">
-<title>ІВЕМ-гімнастика</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="../CtyCIleTg62l.com/mas_new/img/Rg9OEb6rk4Ln.png/index.html">
-<meta property="og:title" content="">
-<meta property="og:description" content="">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>ІВЕМ-гімнастика</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../CtyCIleTg62l.com/mas_new/img/Rg9OEb6rk4Ln.png/index.html">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
     
-<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
-<link rel="stylesheet" href="js/jquery.arcticmodal-0.3.css" defer="">
-<link rel="stylesheet" href="js/themes/simple.css" defer="">
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="js/jquery.arcticmodal-0.3.css" defer="">
+    <link rel="stylesheet" href="js/themes/simple.css" defer="">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
 
+    <!-- Meta Pixel Code (BASE) -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '885125430564169');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=885125430564169&ev=PageView&noscript=1"/>
+    </noscript>
+     <!-- End Meta Pixel Code -->
 
 </head>
 <body>
@@ -460,7 +479,21 @@
 <script src="js/jquery.cookie.js"></script>
 <script src="js/common.js" async=""></script>
 
-
+<script>
+    /** Attribution capture v1 (UTM + cr + lv + fbclid) */
+    (function(){
+      const qs = new URLSearchParams(location.search);
+      const keys = ['utm_source','utm_medium','utm_campaign','utm_content','lv','cr','fbclid'];
+      const attrib = {};
+      keys.forEach(k => {
+        const v = qs.get(k);
+        if (v) attrib[k] = v;
+      });
+      if (Object.keys(attrib).length) {
+        try { localStorage.setItem('cw_attrib', JSON.stringify(attrib)); } catch(e) {}
+      }
+    })();
+ </script>
 
 
 
