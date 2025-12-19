@@ -1,11 +1,29 @@
-$( ".openModal" ).click(function(e) {
-        // URL, который нужно открыть
-        var linkUrl = 'https://pay.fondy.eu/s/YXUtQGhkaYtMcU';
+$(".openModal").click(function(e) {
+  e.preventDefault();
 
-        // Открыть ссылку в новом окне или вкладке
-        window.open(linkUrl, '_blank');
+  // 1) достаем атрибуцию
+  let attrib = {};
+  try { attrib = JSON.parse(localStorage.getItem('cw_attrib') || '{}'); } catch(_) {}
+
+  // 2) шлем InitiateCheckout ДО ухода
+  if (typeof fbq === 'function') {
+    fbq('track', 'InitiateCheckout', {
+      value: 3000,
+      currency: 'UAH',
+      content_name: 'IVEM',
+      ...attrib
     });
+  }
 
+  // 3) открываем оплату
+  const basePayUrl = 'https://pay.fondy.eu/s/PASTE_FINAL_LINK_HERE';
+
+  // 3.1 (опционально) проброс UTM/cr/lv в оплату (если Fondy разрешает)
+  const a = new URLSearchParams(attrib).toString();
+  const payUrl = a ? (basePayUrl + (basePayUrl.includes('?') ? '&' : '?') + a) : basePayUrl;
+
+  window.open(payUrl, '_blank');
+});
 
 $( ".openModal1" ).click(function(e) {
     e.preventDefault();
